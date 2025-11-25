@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GloryGirls</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(to bottom, #ffe6ef, #fff);
+        color: #333;
+        line-height: 1.7;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    header {
+        background: #ff6f91;
+        color: #fff;
+        text-align: center;
+        padding: 30px 20px;
+        font-size: 2.2em;
+        font-weight: 700;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: 40px auto;
+        padding: 0 20px;
+        flex: 1;
+    }
+
+    /* Tabs */
+    .tabs {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 10px;
+        margin-bottom: 25px;
+    }
+
+    .tab {
+        padding: 15px;
+        background: #ffe6ef;
+        text-align: center;
+        border-radius: 12px 12px 0 0;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .tab:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .tab.active {
+        background: #ff6f91;
+        color: #fff;
+        font-weight: 700;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Tab Content */
+    .tab-content {
+        display: none;
+        background: #fff;
+        padding: 25px;
+        border-radius: 0 12px 12px 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .tab-content.active {
+        display: block;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px);}
+        to { opacity: 1; transform: translateY(0);}
+    }
+
+    h2 {
+        color: #ff6f91;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #ff6f91;
+        padding-bottom: 5px;
+        font-size: 1.6em;
+    }
+
+    ul {
+        list-style: inside disc;
+        padding-left: 10px;
+    }
+
+    li {
+        margin-bottom: 10px;
+        font-size: 1.05em;
+        line-height: 1.8;
+        transition: transform 0.2s;
+    }
+
+    li:hover {
+        transform: translateX(5px);
+        color: #ff6f91;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #ff6f91;
+        color: #fff;
+        font-weight: 500;
+        font-size: 0.95em;
+        box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+        margin-top: auto;
+    }
+
+    /* Responsive adjustments */
+    @media(max-width: 768px){
+        h2 { font-size: 1.4em; }
+        .tab { font-size: 0.9em; padding: 12px; }
+        li { font-size: 1em; }
+    }
+</style>
+</head>
+<body>
+
+<header>GloryGirls</header>
+
+<div class="container">
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <div class="tab active" data-tab="bio">জীববিজ্ঞান</div>
+        <div class="tab" data-tab="mental">মানসিক & আবেগ</div>
+        <div class="tab" data-tab="behavior">আচরণ & সামাজিক</div>
+        <div class="tab" data-tab="sexual">যৌনতা & আকর্ষণ</div>
+        <div class="tab" data-tab="physical">শারীরিক & হরমোনাল</div>
+        <div class="tab" data-tab="health">স্বাস্থ্য & জীবনধারা</div>
+        <div class="tab" data-tab="thinking">চিন্তাভাবনা & ব্যক্তিত্ব</div>
+        <div class="tab" data-tab="relationship">সম্পর্ক & রহস্য</div>
+    </div>
+
+    <!-- Tab Contents -->
+    <div id="bio" class="tab-content active">
+        <h2>জীববিজ্ঞানিক দিক</h2>
+        <ul>
+            <li>জেনেটিক্স: XX ক্রোমোজোম দ্বারা নির্ধারিত।</li>
+            <li>শারীরিক বৈশিষ্ট্য: কোমর-হিপ অনুপাত, স্তন, ডিম্বাশয়, নরম ত্বক, ঘন চুল।</li>
+            <li>হরমোন: ইস্ট্রোজেন ও প্রোজেস্টেরন।</li>
+            <li>প্রজনন চক্র: মাসিক চক্র ও গর্ভধারণের ক্ষমতা।</li>
+        </ul>
+    </div>
+
+    <div id="mental" class="tab-content">
+        <h2>মানসিক ও আবেগগত</h2>
+        <ul>
+            <li>সংবেদনশীলতা: আবেগকে গভীরভাবে অনুভব করে।</li>
+            <li>সম্পর্কমূলক চিন্তাভাবনা: পরিবার ও বন্ধুত্বকে সর্বাধিক গুরুত্ব দেয়।</li>
+            <li>মনোভাবের চেঞ্জ: হরমোন, পরিবেশ বা পরিস্থিতি অনুযায়ী পরিবর্তিত।</li>
+            <li>আবেগ প্রকাশ: সরাসরি নয়, ইঙ্গিত বা আচরণের মাধ্যমে প্রকাশ।</li>
+            <li>সমর্থন ও প্রশংসা পেলে আত্মবিশ্বাস বৃদ্ধি পায়।</li>
+        </ul>
+    </div>
+
+    <div id="behavior" class="tab-content">
+        <h2>আচরণ & সামাজিক</h2>
+        <ul>
+            <li>সামাজিক বুদ্ধিমত্তা: মানুষের মানসিক অবস্থা বোঝার দক্ষতা।</li>
+            <li>যোগাযোগের ধরন: কথার পাশাপাশি চোখের দৃষ্টি, হাসি, শরীরের ভাষা।</li>
+            <li>মাল্টিটাস্কিং: একাধিক কাজ একসাথে করতে পারে।</li>
+            <li>সামাজিক প্রভাব: বন্ধু, পরিবার, কর্মক্ষেত্রে সম্পর্ক বজায় রাখা।</li>
+            <li>শিক্ষা ও ক্যারিয়ার: জীবনের প্রতিটি ক্ষেত্রে প্রতিভা এবং দক্ষতা প্রদর্শন।</li>
+        </ul>
+    </div>
+
+    <div id="sexual" class="tab-content">
+        <h2>যৌনতা & আকর্ষণ</h2>
+        <ul>
+            <li>আকর্ষণ: ব্যক্তিত্ব, আচরণ, শ্রদ্ধা ও নিরাপত্তা।</li>
+            <li>সীমা ও সম্মান: স্পর্শ, কথাবার্তা ও ব্যক্তিগত সীমা সংবেদনশীল।</li>
+            <li>রোমান্টিক মনোভাব: ছোট খেয়াল, শব্দ ও আচরণ গভীর প্রভাব ফেলে।</li>
+            <li>সম্পর্কে বিশ্বাস ও নিরাপত্তা প্রধান ভিত্তি।</li>
+        </ul>
+    </div>
+
+    <div id="physical" class="tab-content">
+        <h2>শারীরিক & হরমোনাল</h2>
+        <ul>
+            <li>মাসিক চক্রের প্রভাব: মানসিক ও শারীরিক উত্থান-পতন।</li>
+            <li>শরীরের ভাষা: চোখ, হাসি, ভঙ্গি, লাল হওয়া ইঙ্গিত দেয়।</li>
+            <li>হরমোনাল প্রভাব: ইস্ট্রোজেন ও প্রোজেস্টেরন আবেগ ও আচরণ প্রভাবিত করে।</li>
+            <li>শারীরিক স্বাস্থ্য: বৃদ্ধি, হাড়ের ঘনত্ব, ত্বক ও চুলের স্বাস্থ্য।</li>
+        </ul>
+    </div>
+
+    <div id="health" class="tab-content">
+        <h2>স্বাস্থ্য & জীবনধারা</h2>
+        <ul>
+            <li>পুষ্টি: প্রোটিন, ক্যালসিয়াম, আয়রন, ভিটামিন ডি গুরুত্বপূর্ণ।</li>
+            <li>ব্যায়াম, যোগ ও পর্যাপ্ত ঘুম মানসিক ও শারীরিক সুস্থতার জন্য জরুরি।</li>
+            <li>মানসিক স্বাস্থ্য: সম্পর্ক, সমর্থন ও বন্ধুত্ব অপরিহার্য।</li>
+            <li>জীবনধারার প্রভাব: খাদ্যাভ্যাস, কাজের চাপ ও সামাজিক সম্পর্ক।</li>
+        </ul>
+    </div>
+
+    <div id="thinking" class="tab-content">
+        <h2>চিন্তাভাবনা & ব্যক্তিত্ব</h2>
+        <ul>
+            <li>নিজস্ব মতামত: স্বাধীন চিন্তা রাখতে পারে, শ্রদ্ধা গুরুত্বপূর্ণ।</li>
+            <li>জটিল চিন্তাভাবনা: যৌক্তিক, আবেগপূর্ণ ও সামাজিক প্রভাব বিশ্লেষণ।</li>
+            <li>সৃজনশীলতা: নতুন সমাধান ও আইডিয়ায় আগ্রহী।</li>
+            <li>মনোভাব ও আচরণ বিশ্লেষণ: সম্পর্ক ও সিদ্ধান্তে প্রভাব ফেলে।</li>
+        </ul>
+    </div>
+
+    <div id="relationship" class="tab-content">
+        <h2>সম্পর্ক & রহস্য</h2>
+        <ul>
+            <li>বিশ্বাস ও নিরাপত্তা: সম্পর্কের ভিত্তি।</li>
+            <li>আবেগের সূক্ষ্ম ইঙ্গিত বোঝার ক্ষমতা।</li>
+            <li>মানসিক সমর্থন, প্রশংসা ও ভালোবাসা তাদের মনকে প্রভাবিত করে।</li>
+            <li>ছোট খুশি, হাসি, খেয়াল রাখার মাধ্যমে সম্পর্ক শক্তিশালী হয়।</li>
+            <li>হরমোনাল বা আবেগগত পরিবর্তনের সময় ধৈর্য এবং ইতিবাচকতা অপরিহার্য।</li>
+        </ul>
+    </div>
+
+</div>
+
+<footer>Humayun Shariar Himu</footer>
+
+<script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+
+            tab.classList.add('active');
+            document.getElementById(tab.dataset.tab).classList.add('active');
+        });
+    });
+</script>
+
+</body>
+</html>
